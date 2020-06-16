@@ -16,14 +16,14 @@
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
     <RelativeLayout
+        android:id="@+id/relLayout1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:elevation="10dp"
         android:background="@drawable/white_border"
-        android:id="@+id/relLayout1">
+        android:elevation="10dp">
 
         <ImageView
             android:layout_width="15dp"
