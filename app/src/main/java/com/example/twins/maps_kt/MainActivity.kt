@@ -1,9 +1,9 @@
 package com.example.twins.maps_kt
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentActivity.*
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentActivity.*
 import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.common.GoogleApiAvailability
