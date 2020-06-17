@@ -32,6 +32,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import java.nio.file.Files.size
 
 import android.location.Geocoder
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
@@ -41,6 +42,7 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.model.*
+import kotlinx.android.synthetic.main.activity_map.*
 import java.io.IOException
 
 
@@ -97,6 +99,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
     private var mMarker:Marker?=null
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
@@ -106,6 +110,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
         mInfo =  findViewById<ImageView>(R.id.place_info);
 
         getLocationPermission();
+
+
 
     }
 
@@ -171,7 +177,11 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
             } catch (e: NullPointerException) {
                 Log.e(TAG, "onClick: NullPointerException: " + e.message)
             }
+            drawer_layout.openDrawer(Gravity.LEFT)
 
+        }
+        ImgViewDrawerMenu!!.setOnClickListener{ view->
+            drawer_layout.openDrawer(Gravity.LEFT)
         }
         hideSoftKeyboard()
     }
