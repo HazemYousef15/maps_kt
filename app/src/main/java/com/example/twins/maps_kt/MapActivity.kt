@@ -177,7 +177,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
             } catch (e: NullPointerException) {
                 Log.e(TAG, "onClick: NullPointerException: " + e.message)
             }
-            drawer_layout.openDrawer(Gravity.LEFT)
 
         }
         ImgViewDrawerMenu!!.setOnClickListener{ view->

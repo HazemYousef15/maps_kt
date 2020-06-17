@@ -7,7 +7,7 @@
     tools:context=".MapActivity"
     android:fitsSystemWindows="true"
     android:id="@+id/drawer_layout"
-
+    tools:openDrawer="start"
     >
 
 
@@ -44,7 +44,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/menu" />
+                android:src="@drawable/menu_open" />
 
             <RelativeLayout
                 android:id="@+id/relLayout1"
