@@ -1,7 +1,7 @@
 package com.example.twins.maps_kt
 
 import android.Manifest
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.Manifest.permission
 import android.Manifest.permission.ACCESS_COARSE_LOCATION
@@ -9,13 +9,13 @@ import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Location
-import android.support.annotation.NonNull
+import androidx.annotation.NonNull
 import android.util.Log
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 //import android.support.test.orchestrator.junit.BundleJUnitUtils.getResult
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -32,6 +32,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import java.nio.file.Files.size
 
 import android.location.Geocoder
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
@@ -41,6 +42,7 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.model.*
+import kotlinx.android.synthetic.main.activity_map.*
 import java.io.IOException
 
 
@@ -97,6 +99,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
     private var mMarker:Marker?=null
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
@@ -106,6 +110,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
         mInfo =  findViewById<ImageView>(R.id.place_info);
 
         getLocationPermission();
+
+
 
     }
 
@@ -172,6 +178,9 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback , GoogleApiClient.OnC
                 Log.e(TAG, "onClick: NullPointerException: " + e.message)
             }
 
+        }
+        ImgViewDrawerMenu!!.setOnClickListener{ view->
+            drawer_layout.openDrawer(Gravity.LEFT)
         }
         hideSoftKeyboard()
     }

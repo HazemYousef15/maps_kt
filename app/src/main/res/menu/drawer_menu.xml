@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/itmHelp"
+            android:title="Help"
+            android:icon="@drawable/help_icon"/>
+        <item
+            android:id="@+id/itmPayment"
+            android:title="Payment"
+            android:icon="@drawable/payment_icon"/>
+        <item
+            android:id="@+id/itmDiscount"
+            android:title="Discounts"
+            android:icon="@drawable/discount_icon"/>
+        <item
+            android:id="@+id/itmSetting"
+            android:title="Settings"
+            android:icon="@drawable/settings_icon"/>
+        <item
+            android:id="@+id/itmBooking"
+            android:title="Booking History"
+            android:icon="@drawable/booking_icon"/>
+        <item
+            android:id="@+id/itmLogOut"
+            android:title="Log out"
+            android:icon="@drawable/log_out_icon"/>
+
+    </group>
+</menu>
